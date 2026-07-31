@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { CHARACTERS } from '../data/characters';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
-import { getImageUrl } from '../utils/imageHelper';
+import TayoCharacterAvatar from './TayoCharacterAvatar';
 
 export default function QuizGame() {
   const [target, setTarget] = useState(null);
@@ -130,14 +130,9 @@ export default function QuizGame() {
                   : '#cbd5e1'
             }}
           >
-            <img
-              src={getImageUrl(option.image)}
-              alt={option.name}
-              className="quiz-option-img"
-              onError={(e) => {
-                e.target.style.display = 'none';
-              }}
-            />
+            <div style={{ width: '140px', height: '120px', marginBottom: '0.75rem' }}>
+              <TayoCharacterAvatar character={option} className="quiz-option-img" />
+            </div>
             <span style={{ fontSize: '1.6rem', fontWeight: 'bold', color: '#1e293b' }}>
               {option.badge} {option.name}
             </span>

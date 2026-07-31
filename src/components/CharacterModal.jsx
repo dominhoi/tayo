@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
-import { getImageUrl } from '../utils/imageHelper';
+import TayoCharacterAvatar from './TayoCharacterAvatar';
 
 export default function CharacterModal({ character, onClose }) {
-  const [imgError, setImgError] = useState(false);
-
   useEffect(() => {
     if (character) {
       speakGreeting(character.greeting);
-      setImgError(false);
     }
   }, [character]);
 
@@ -27,17 +24,10 @@ export default function CharacterModal({ character, onClose }) {
             {character.badge} {character.name} {character.number ? `(${character.number})` : ''}
           </span>
 
-          {/* Image */}
-          {!imgError ? (
-            <img
-              src={getImageUrl(character.image)}
-              alt={character.name}
-              className="modal-image"
-              onError={() => setImgError(true)}
-            />
-          ) : (
-            <div style={{ fontSize: '6rem', margin: '1rem' }}>{character.badge}</div>
-          )}
+          {/* Image / Avatar */}
+          <div style={{ width: '240px', height: '200px', margin: '0.5rem 0' }}>
+            <TayoCharacterAvatar character={character} className="modal-image" />
+          </div>
 
           {/* Speech Bubble */}
           <div className="speech-bubble">

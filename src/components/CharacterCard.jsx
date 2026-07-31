@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
-import { getImageUrl } from '../utils/imageHelper';
+import TayoCharacterAvatar from './TayoCharacterAvatar';
 
 export default function CharacterCard({ character, onSelectCard }) {
-  const [imgError, setImgError] = useState(false);
-
   const handleSpeak = (e) => {
     e.stopPropagation();
     speakGreeting(character.greeting);
@@ -23,18 +21,9 @@ export default function CharacterCard({ character, onSelectCard }) {
         <span>{character.colorName}</span>
       </div>
 
-      {/* Image or Fallback Visual */}
+      {/* Image / Hybrid Visual Avatar */}
       <div className="card-image-wrapper">
-        {!imgError ? (
-          <img
-            src={getImageUrl(character.image)}
-            alt={character.name}
-            className="card-image"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <div className="card-fallback-icon">{character.badge}</div>
-        )}
+        <TayoCharacterAvatar character={character} className="card-image" />
       </div>
 
       {/* Info Header */}
