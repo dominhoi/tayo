@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
+import { getImageUrl } from '../utils/imageHelper';
 
 export default function CharacterCard({ character, onSelectCard }) {
   const [imgError, setImgError] = useState(false);
@@ -26,7 +27,7 @@ export default function CharacterCard({ character, onSelectCard }) {
       <div className="card-image-wrapper">
         {!imgError ? (
           <img
-            src={character.image}
+            src={getImageUrl(character.image)}
             alt={character.name}
             className="card-image"
             onError={() => setImgError(true)}

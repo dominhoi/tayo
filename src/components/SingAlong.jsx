@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
+import { getImageUrl } from '../utils/imageHelper';
 
 export default function SingAlong() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -39,7 +40,7 @@ export default function SingAlong() {
 
       {/* Dancing Bus Graphic */}
       <img
-        src="/assets/tayo.png"
+        src={getImageUrl('/assets/tayo.png')}
         alt="Dancing Tayo"
         className="dancing-tayo-img"
       />

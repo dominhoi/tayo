@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { CHARACTERS } from '../data/characters';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
+import { getImageUrl } from '../utils/imageHelper';
 
 export default function QuizGame() {
   const [target, setTarget] = useState(null);
@@ -130,7 +131,7 @@ export default function QuizGame() {
             }}
           >
             <img
-              src={option.image}
+              src={getImageUrl(option.image)}
               alt={option.name}
               className="quiz-option-img"
               onError={(e) => {

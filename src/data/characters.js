@@ -1,5 +1,5 @@
 export const CHARACTERS = [
-  // 1. 꼬마버스 & 대중교통 팀
+  // 1. 꼬마버스 차고지 & 노선버스
   {
     id: 'tayo',
     name: '타요',
@@ -110,7 +110,7 @@ export const CHARACTERS = [
     categoryName: '꼬마버스',
     color: '#A51D24',
     colorName: '버건디',
-    number: '할아버지 버스',
+    number: '할아버지',
     vehicleType: '시골 할아버지 버스',
     greeting: '허허, 반갑다 꼬마 친구야! 나는 씨투의 스승이자 시골 마을의 오래된 부바 할아버지 버스란다!',
     catchphrase: '경험 많고 지혜로운 할아버지 버스!',
@@ -120,6 +120,23 @@ export const CHARACTERS = [
     quizHint: '인자한 미소를 지닌 씨투의 선생님 할아버지 버스!'
   },
   {
+    id: 'nana',
+    name: '나나',
+    englishName: 'Nana',
+    category: 'bus',
+    categoryName: '꼬마버스',
+    color: '#E83E8C',
+    colorName: '분홍/노란',
+    number: '082번',
+    vehicleType: '시골 꼬마 버스',
+    greeting: '안녕! 시골 마을 차고지에서 살고 있는 상냥한 082번 버스 나나야!',
+    catchphrase: '도회적이고 예쁜 시골 꼬마 버스!',
+    soundType: 'horn_high',
+    badge: '🚌',
+    image: '/assets/nana.png',
+    quizHint: '082번 번호가 붙은 상냥하고 귀여운 시골 꼬마 버스!'
+  },
+  {
     id: 'cuckoo',
     name: '쿠쿠',
     englishName: 'Cuckoo',
@@ -127,34 +144,17 @@ export const CHARACTERS = [
     categoryName: '꼬마버스',
     color: '#FD7E14',
     colorName: '주황색',
-    number: '시골 버스',
+    number: '031번',
     vehicleType: '시골 꼬마 버스',
-    greeting: '안녕! 시골 마을 도로를 씽씽 달리는 순박한 꼬마 버스 쿠쿠야!',
+    greeting: '안녕! 시골 마을 도로를 씽씽 달리는 순박한 031번 꼬마 버스 쿠쿠야!',
     catchphrase: '부바 할아버지와 함께 사는 순박한 시골 버스!',
     soundType: 'horn',
     badge: '🚌',
     image: '/assets/cuckoo.png',
-    quizHint: '부바 할아버지 버스와 함께 시골길을 달리는 주황색 버스!'
-  },
-  {
-    id: 'trammy',
-    name: '트래미',
-    englishName: 'Trammy',
-    category: 'bus',
-    categoryName: '꼬마버스',
-    color: '#6F42C1',
-    colorName: '보라색',
-    number: '트램',
-    vehicleType: '보라색 노면전차 (트램)',
-    greeting: '칙칙폭폭 땡땡! 나는 레일 위를 기분 좋게 달리는 예쁜 노면전차 트래미야!',
-    catchphrase: '도로 위 철길을 따라 달리는 귀여운 트램!',
-    soundType: 'electric_chime',
-    badge: '🚋',
-    image: '/assets/trammy.png',
-    quizHint: '도로 위의 철길 레일을 따라 달리는 예쁜 보라색 트램 전차!'
+    quizHint: '031번 번호를 단 부바 할아버지 동네의 주황색 버스!'
   },
 
-  // 2. 긴급출동 구조대
+  // 2. 긴급출동센터 구조대
   {
     id: 'frank',
     name: '프랭크',
@@ -256,6 +256,23 @@ export const CHARACTERS = [
     badge: '👮‍♂️',
     image: '/assets/rookie.png',
     quizHint: '경찰차 패트와 함께 도로 안전을 지키는 멋진 경찰관 아저씨!'
+  },
+  {
+    id: 'jay',
+    name: '제이',
+    englishName: 'Jay',
+    category: 'rescue',
+    categoryName: '긴급출동 구조대',
+    color: '#FF6B6B',
+    colorName: '빨간/주황',
+    number: '구조대원',
+    vehicleType: '긴급출동 구조대원',
+    greeting: '안녕! 프랭크, 앨리스와 함께 시민들을 구하는 씩씩한 구조대원 제이야!',
+    catchphrase: '긴급출동센터의 능력 있는 여성 구조대원!',
+    soundType: 'siren_fire',
+    badge: '👩‍🚒',
+    image: '/assets/jay.png',
+    quizHint: '긴급출동센터에서 소방차, 구급차를 지휘하는 용감한 언니!'
   },
 
   // 3. 공사장 중장비
@@ -432,6 +449,23 @@ export const CHARACTERS = [
     quizHint: '동글동글 하늘색의 귀여운 꼬마 승합차!'
   },
   {
+    id: 'ollie',
+    name: '올리',
+    englishName: 'Ollie',
+    category: 'car',
+    categoryName: '승용차와 친구들',
+    color: '#10B981',
+    colorName: '연두색',
+    number: '아기차',
+    vehicleType: '아기 승용차',
+    greeting: '안녕! 옹알옹알 봉봉이와 함께 놀기를 좋아하는 아기 승용차 올리야!',
+    catchphrase: '봉봉이의 귀여운 아기 자동차 친구!',
+    soundType: 'cute_beep',
+    badge: '🚗',
+    image: '/assets/ollie.png',
+    quizHint: '봉봉이와 같이 다니는 아담한 연두색 아기 승용차!'
+  },
+  {
     id: 'rubby',
     name: '러비',
     englishName: 'Rubby',
@@ -447,6 +481,23 @@ export const CHARACTERS = [
     badge: '🧹',
     image: '/assets/rubby.png',
     quizHint: '밑에 동그란 솔이 달려 도로의 먼지를 쓱싹 청소하는 차!'
+  },
+  {
+    id: 'tony',
+    name: '토니',
+    englishName: 'Tony',
+    category: 'car',
+    categoryName: '승용차와 친구들',
+    color: '#0284C7',
+    colorName: '하늘/흰색',
+    number: '택배차',
+    vehicleType: '소형 택배 트럭',
+    greeting: '딩동! 택배 배달왔습니다! 안전운전을 실천하는 소형 택배 트럭 토니야!',
+    catchphrase: '기쁨과 선물을 안전하게 전달하는 택배 트럭!',
+    soundType: 'truck_horn',
+    badge: '📦',
+    image: '/assets/tony.png',
+    quizHint: '상자와 선물을 도로 가득 배달해 주는 친절한 택배 트럭!'
   },
   {
     id: 'carrie',
@@ -500,6 +551,23 @@ export const CHARACTERS = [
     quizHint: '귀여운 유치원 아이들을 안전하게 등하원시켜주는 스쿨버스!'
   },
   {
+    id: 'teach',
+    name: '티치',
+    englishName: 'Teach',
+    category: 'car',
+    categoryName: '승용차와 친구들',
+    color: '#8B5CF6',
+    colorName: '보라색',
+    number: '선생님',
+    vehicleType: '자동차 학교 선생님 승용차',
+    greeting: '안녕 어린이 친구들! 교통 규칙을 차근차근 가르쳐주는 자동차 학교 티치 선생님이야!',
+    catchphrase: '자동차 친구들에게 안전운전을 가르쳐주는 보라색 선생님 차!',
+    soundType: 'horn',
+    badge: '👩‍🏫',
+    image: '/assets/teach.png',
+    quizHint: '안전 수칙과 교통 신호를 잘 가르쳐주는 보라색 자동차 선생님!'
+  },
+  {
     id: 'champ',
     name: '챔프',
     englishName: 'Champ',
@@ -533,8 +601,112 @@ export const CHARACTERS = [
     image: '/assets/big.png',
     quizHint: '몸집이 아주아주 커서 긴 컨테이너를 달고 다니는 트럭!'
   },
+  {
+    id: 'windy',
+    name: '윈디',
+    englishName: 'Windy',
+    category: 'car',
+    categoryName: '승용차와 친구들',
+    color: '#06B6D4',
+    colorName: '민트/하늘',
+    number: '캠핑카',
+    vehicleType: '캠핑카 윈디',
+    greeting: '바람 따라 구름 따라 모험을 떠나자! 신나는 여행가 캠핑카 윈디야!',
+    catchphrase: '어디로든 자유롭게 여행을 떠나는 모험가 캠핑카!',
+    soundType: 'horn_high',
+    badge: '🚐',
+    image: '/assets/windy.png',
+    quizHint: '텐트와 캠핑 장비를 싣고 여행을 떠나는 자유로운 캠핑카!'
+  },
 
-  // 5. 사람 친구들
+  // 5. 공항 & 철도/트램 (Airport & Railways)
+  {
+    id: 'cargo',
+    name: '카고',
+    englishName: 'Cargo',
+    category: 'airport',
+    categoryName: '공항 & 철도',
+    color: '#0284C7',
+    colorName: '파란/흰색',
+    number: '비행기',
+    vehicleType: '대형 화물 수송 비행기',
+    greeting: '슈웅! 높은 하늘을 날아 전 세계로 짐을 배달하는 거대한 화물 비행기 카고야!',
+    catchphrase: '공항 하늘을 가르는 멋진 수송 비행기!',
+    soundType: 'helicopter',
+    badge: '✈️',
+    image: '/assets/cargo.png',
+    quizHint: '하늘 높이 날아다니는 커다란 화물 수송 비행기!'
+  },
+  {
+    id: 'trammy',
+    name: '트래미',
+    englishName: 'Trammy',
+    category: 'airport',
+    categoryName: '공항 & 철도',
+    color: '#6F42C1',
+    colorName: '보라색',
+    number: '트램',
+    vehicleType: '보라색 노면전차 (트램)',
+    greeting: '칙칙폭폭 땡땡! 나는 레일 위를 기분 좋게 달리는 예쁜 노면전차 트래미야!',
+    catchphrase: '도로 위 철길을 따라 달리는 귀여운 트램!',
+    soundType: 'electric_chime',
+    badge: '🚋',
+    image: '/assets/trammy.png',
+    quizHint: '도로 위의 철길 레일을 따라 달리는 예쁜 보라색 트램 전차!'
+  },
+  {
+    id: 'titipo',
+    name: '띠띠뽀',
+    englishName: 'Titipo',
+    category: 'airport',
+    categoryName: '공항 & 철도',
+    color: '#DC3545',
+    colorName: '빨간/파란',
+    number: '꼬마기차',
+    vehicleType: '꼬마 여객 기관차',
+    greeting: '칙칙폭폭 띠띠뽀! 기차 마을에서 온 신나는 꼬마 기관차 띠띠뽀야!',
+    catchphrase: '철길 위를 달리는 씩씩하고 명랑한 꼬마 기차!',
+    soundType: 'electric_chime',
+    badge: '🚂',
+    image: '/assets/titipo.png',
+    quizHint: '철길을 따라 칙칙폭폭 신나게 달리는 빨간색 꼬마 기차!'
+  },
+  {
+    id: 'genie',
+    name: '지니',
+    englishName: 'Genie',
+    category: 'airport',
+    categoryName: '공항 & 철도',
+    color: '#E83E8C',
+    colorName: '분홍색',
+    number: '여객기차',
+    vehicleType: '분홍 여객 기관차',
+    greeting: '상냥하고 친절하게 손님들을 모시는 분홍빛 여객 기차 지니야!',
+    catchphrase: '띠띠뽀의 다정한 분홍색 기차 친구!',
+    soundType: 'electric_chime',
+    badge: '🚆',
+    image: '/assets/genie.png',
+    quizHint: '손님들을 안전하게 태워주는 상냥한 분홍색 기차!'
+  },
+  {
+    id: 'diesel',
+    name: '디젤',
+    englishName: 'Diesel',
+    category: 'airport',
+    categoryName: '공항 & 철도',
+    color: '#0D6EFD',
+    colorName: '파란색',
+    number: '화물기차',
+    vehicleType: '힘센 디젤 화물 기관차',
+    greeting: '우릉우릉! 장난기 많고 힘센 디젤 화물 기차 디젤이야!',
+    catchphrase: '무거운 짐을 이끌고 장난치는 힘센 디젤 기차!',
+    soundType: 'heavy_engine',
+    badge: '🚂',
+    image: '/assets/diesel.png',
+    quizHint: '무거운 화물칸을 끌고 다니는 장난기 넘치는 파란색 기차!'
+  },
+
+  // 6. 사람 친구들
   {
     id: 'hana',
     name: '하나',
@@ -568,16 +740,88 @@ export const CHARACTERS = [
     badge: '👦',
     image: '/assets/duri.png',
     quizHint: '타요 버스에 매일 타고 함께 모험을 떠나는 노란 옷 꼬마 소년!'
+  },
+  {
+    id: 'joy',
+    name: '조이',
+    englishName: 'Joy',
+    category: 'human',
+    categoryName: '사람 친구들',
+    color: '#8B5CF6',
+    colorName: '보라색',
+    number: '마술사',
+    vehicleType: '자동차 공연 마술사',
+    greeting: '수리수리 마수리! 신기한 자동차 마술을 보여주는 마술사 조이 삼촌이야!',
+    catchphrase: '버스 친구들과 함께 신나는 마술쇼를 펼치는 마술사!',
+    soundType: 'correct_fanfare',
+    badge: '🎩',
+    image: '/assets/joy.png',
+    quizHint: '모자와 지팡이를 들고 신기한 마술쇼를 보여주는 조이 삼촌!'
+  },
+
+  // 7. 히어로 & 마법 / 이벤트 캐릭터
+  {
+    id: 'asura',
+    name: '아수라',
+    englishName: 'Asura',
+    category: 'villain',
+    categoryName: '특별 & 마법',
+    color: '#475569',
+    colorName: '보라/검정',
+    number: '마술트럭',
+    vehicleType: '신비한 마술 트럭 아수라',
+    greeting: '크하하! 신비한 차원을 오가는 도깨비 마술 트럭 아수라다!',
+    catchphrase: '신비한 마술 상자를 탑재한 도깨비 트럭!',
+    soundType: 'sports_car',
+    badge: '🔮',
+    image: '/assets/asura.png',
+    quizHint: '신비롭고 오묘한 도깨비 불빛을 내뿜는 마술 트럭!'
+  },
+  {
+    id: 'guardian_x',
+    name: '가디언 X',
+    englishName: 'Guardian X',
+    category: 'villain',
+    categoryName: '특별 & 마법',
+    color: '#0284C7',
+    colorName: '파란 히어로',
+    number: '변신로봇',
+    vehicleType: '변신 히어로 슈퍼카',
+    greeting: '정의의 이름으로 악당을 물리친다! 변신 히어로 가디언 X다!',
+    catchphrase: '위기가 오면 로봇으로 변신하는 파란 영웅 스포츠카!',
+    soundType: 'sports_car',
+    badge: '🦸‍♂️',
+    image: '/assets/guardian_x.png',
+    quizHint: '로봇으로 변신하여 악당을 퇴치하는 멋진 파란색 히어로 차!'
+  },
+  {
+    id: 'bully',
+    name: '불리',
+    englishName: 'Bully',
+    category: 'villain',
+    categoryName: '특별 & 마법',
+    color: '#DC3545',
+    colorName: '우주 악당',
+    number: '악당선장',
+    vehicleType: '우주 악당 우주선',
+    greeting: '으하하! 지구를 정복하러 온 우주 악당 불리다!',
+    catchphrase: '꼬마버스 장난에 엉뚱하게 패배하는 허당 우주 악당!',
+    soundType: 'heavy_engine',
+    badge: '👾',
+    image: '/assets/bully.png',
+    quizHint: '타요와 친구들을 괴롭히려 하지만 맨날 실패하는 엉뚱한 우주 악당!'
   }
 ];
 
 export const CATEGORIES = [
-  { id: 'all', name: '전체 보기 (30+)', badge: '🌈' },
+  { id: 'all', name: '전체 보기 (40+)', badge: '🌈' },
   { id: 'bus', name: '꼬마버스', badge: '🚌' },
   { id: 'rescue', name: '긴급출동 구조대', badge: '🚨' },
   { id: 'construction', name: '공사장 중장비', badge: '🏗️' },
   { id: 'car', name: '승용차 친구들', badge: '🚗' },
-  { id: 'human', name: '사람 친구들', badge: '🧑‍🔧' }
+  { id: 'airport', name: '공항 & 기차', badge: '✈️' },
+  { id: 'human', name: '사람 친구들', badge: '🧑‍🔧' },
+  { id: 'villain', name: '히어로 & 마법', badge: '🔮' }
 ];
 
 export const COLOR_FILTERS = [

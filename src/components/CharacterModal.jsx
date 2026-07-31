@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { speakGreeting, playSoundEffect } from '../utils/audio';
+import { getImageUrl } from '../utils/imageHelper';
 
 export default function CharacterModal({ character, onClose }) {
   const [imgError, setImgError] = useState(false);
@@ -7,6 +8,7 @@ export default function CharacterModal({ character, onClose }) {
   useEffect(() => {
     if (character) {
       speakGreeting(character.greeting);
+      setImgError(false);
     }
   }, [character]);
 
@@ -28,7 +30,7 @@ export default function CharacterModal({ character, onClose }) {
           {/* Image */}
           {!imgError ? (
             <img
-              src={character.image}
+              src={getImageUrl(character.image)}
               alt={character.name}
               className="modal-image"
               onError={() => setImgError(true)}
